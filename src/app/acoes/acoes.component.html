@@ -5,7 +5,7 @@
     </div>
   </div>
 
-  <div class="td-page-wrapper" *ngIf="actions; else elseBlock">
+  <div class="td-page-wrapper" *ngIf="actions$ | async as actions; else elseBlock">
     <div class="po-row">
       <div class="po-md-4" *ngFor="let action of actions">
         <app-card-acoes [acao]="action"></app-card-acoes>
